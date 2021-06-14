@@ -1,5 +1,23 @@
 // Write your solution in this file!
-let employee = {
+const employee = {
+    streetAdress: "",
+    name: ""
+}
+
+function updateEmployeeWithKeyAndValue(employee, key, value) {
+    const newObject = Object.assign({}, employee)
+
+    newObject[key] = value
+    return newObject
+}
+
+
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+    employee[key] = value
+    return employee
+}
+
+/* let employee = {
     streetAdress: '',
     name: ''
 }
@@ -25,4 +43,4 @@ function deleteFromEmployeeByKey(employee, key) {
 function destructivelyDeleteFromEmployeeByKey(employee, key) {
     delete employee[key]
     return employee
-}
+} */
